@@ -147,9 +147,19 @@ The BPE implementation:
 ## Visualization
 
 The training process generates several plots:
-- `training_stats.png`: Combined visualization of all metrics
-- `vocab_size.png`: Vocabulary growth over iterations
-- `compression_ratio.png`: Compression ratio progress
-- `token_frequencies.png`: Token frequency distribution
+
+### Training Statistics Overview
+![Training Statistics](stats/hindi_bpe/plots/training_stats.png)
+
+### Individual Metrics
+
+#### Vocabulary Size Growth
+![Vocabulary Growth](stats/hindi_bpe/plots/vocab_size.png)
+
+#### Compression Ratio Progress
+![Compression Ratio](stats/hindi_bpe/plots/compression_ratio.png)
+
+#### Token Frequencies
+![Token Frequencies](stats/hindi_bpe/plots/token_frequencies.png)
 
 ## API Usage
