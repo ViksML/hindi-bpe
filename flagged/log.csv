@@ -1,0 +1,7 @@
+Input Text,Tokens,Decoded Text,Statistics,flag,username,timestamp
+नमस्ते भारत। यह एक परीक्षण वाक्य है।,न मस् ते भारत । यह एक परीक्षण वाक्य है।,न म स ् त े भ ा र त । य ह ए क प र ी क ् ष ण व ा क ् य ह ै ।,"'
+    Statistics:
+    - Original characters: 36
+    - Encoded tokens: 10
+    - Compression ratio: 3.60
+    ",,,2025-01-13 09:45:19.072970
