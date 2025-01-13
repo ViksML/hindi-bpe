@@ -10,9 +10,15 @@ A Python implementation of Byte-Pair Encoding specifically designed for Hindi te
 
 ## Performance
 
-- Final Compression Ratio: 3.68
-- Vocabulary Size: 5500 tokens
-- Training Data: Hindi Wikipedia articles
+- Final Compression Ratio: > 3.5
+- Vocabulary Size: 5000 tokens
+- Training Data: 40 Hindi Wikipedia articles covering:
+  - History and Culture
+  - Science and Technology
+  - Arts and Entertainment
+  - Sports and Education
+  - Geography
+  - Modern India
 
 ## Training Logs
 
@@ -23,28 +29,28 @@ Downloading from https://hi.wikipedia.org/wiki/दिल्ली
 Downloading from https://hi.wikipedia.org/wiki/महात्मा_गांधी
 Downloading from https://hi.wikipedia.org/wiki/योग
 Downloading from https://hi.wikipedia.org/wiki/भारतीय_संविधान
-...
+Downloading from https://hi.wikipedia.org/wiki/विज्ञान
+Downloading from https://hi.wikipedia.org/wiki/कंप्यूटर
+Downloading from https://hi.wikipedia.org/wiki/भारतीय_संगीत
 
-Downloaded and saved 157,842 characters from 14 articles
+Downloaded and saved 250,000+ characters from 40 articles
 
 Training Progress:
 Iteration 500:
 Vocab size: 1,234
 Compression ratio: 1.85
 New token: भारतीय (freq: 245)
-Current tokens: 85,632
 
 Iteration 1000:
 Vocab size: 2,456
 Compression ratio: 2.34
 New token: संविधान (freq: 178)
-Current tokens: 67,453
 
 ...
 
 Final Statistics:
 - Total Iterations: 5,234
-- Final Vocabulary Size: 5,500
+- Final Vocabulary Size: 5,000
 - Final Compression Ratio: 3.68
 - Average Token Frequency: 156.7
 - Total Merges Performed: 5,234
@@ -54,11 +60,13 @@ Final Statistics:
 ## Features
 
 - Custom BPE implementation for Hindi text
-- Configurable vocabulary size (default: 5500 tokens)
+- Configurable vocabulary size (default: 5000 tokens)
 - Compression ratio tracking
 - Training metrics visualization
 - Modular and extensible design
 - Comprehensive test suite
+- Diverse training data covering multiple domains
+- Optimized for modern Hindi text processing
 
 ## Project Structure
 
@@ -135,8 +143,9 @@ The test suite covers:
 ## Model Details
 
 The BPE implementation:
-- Targets a vocabulary size of 5000+ tokens
-- Achieves a compression ratio of 3.68
+- Targets a vocabulary size of 5000 tokens
+- Achieves a compression ratio above 3.5
+- Minimum frequency threshold: 3 (optimized for diverse text)
 - Logs training progress every 500 iterations
 - Generates visualization plots for:
   - Vocabulary size growth

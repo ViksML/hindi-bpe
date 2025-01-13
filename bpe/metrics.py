@@ -40,7 +40,6 @@ class MetricsLogger:
             print(f"Vocab size: {metrics.vocab_size:,}")
             print(f"Compression ratio: {metrics.compression_ratio:.2f}")
             print(f"New token: {metrics.new_token} (freq: {metrics.frequency:,})")
-            print(f"Current tokens: {metrics.tokens:,}")
             print("-" * 50)
     
     def save(self, path: str):

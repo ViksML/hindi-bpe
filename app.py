@@ -9,7 +9,7 @@ STATS_DIR = os.path.join('stats', 'hindi_bpe')
 
 def load_model():
     """Load the trained BPE model."""
-    model = HindiBPE(vocab_size=5500)
+    model = HindiBPE(vocab_size=5000)
     model_path = os.path.join(MODEL_DIR, 'model.json')
     stats_path = os.path.join(STATS_DIR, 'metrics.json')
     
@@ -31,17 +31,23 @@ def tokenize_text(text, model):
     original_chars = len(text)
     encoded_tokens = len(tokens)
     compression_ratio = original_chars / encoded_tokens if encoded_tokens > 0 else 0
+    unique_tokens = len(set(tokens))
     
     # Format statistics
     stats = f"""
     Statistics:
     - Original characters: {original_chars}
     - Encoded tokens: {encoded_tokens}
+    - Unique tokens used: {unique_tokens}
     - Compression ratio: {compression_ratio:.2f}
+    - Average token length: {sum(len(t) for t in tokens) / len(tokens):.2f}
     """
     
-    # Format tokens for display
-    tokens_display = " ".join(tokens)
+    # Format tokens with details
+    tokens_display = "\n".join([
+        f"{i+1}. '{token}' (length: {len(token)})"
+        for i, token in enumerate(tokens)
+    ])
     
     # Decode back to text
     decoded_text = model.decode(tokens)
@@ -64,7 +70,11 @@ def create_interface():
             )
         ],
         outputs=[
-            gr.Textbox(label="Tokens"),
+            gr.Textbox(
+                label="Tokens (with details)",
+                lines=10,
+                placeholder="Tokenization details will appear here..."
+            ),
             gr.Textbox(label="Decoded Text"),
             gr.Textbox(label="Statistics")
         ],
@@ -74,8 +84,12 @@ def create_interface():
         Enter Hindi text in the input box to see its tokenized form and statistics.
         
         Model Details:
-        - Vocabulary Size: 5500 tokens
-        - Compression Ratio: 3.68
+        - Vocabulary Size: 5000 tokens
+        - Target Compression Ratio: > 3.5
+        
+        Token Display Format:
+        - Each token is shown with its position and length
+        - Statistics show total, unique tokens and compression metrics
         """,
         examples=[
             ["नमस्ते भारत। यह एक परीक्षण वाक्य है।"],

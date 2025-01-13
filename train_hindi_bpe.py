@@ -25,9 +25,12 @@ def main():
     # Load Hindi text data
     with open(os.path.join(DATA_DIR, 'text.txt'), 'r', encoding='utf-8') as f:
         text = f.read()
+        print(f"\nLoaded {len(text):,} characters of text")
+        print(f"Unique characters: {len(set(text)):,}")
     
     # Initialize and train BPE
-    bpe = HindiBPE(vocab_size=5500)
+    bpe = HindiBPE(vocab_size=5000)
+    print("\nStarting BPE training...")
     bpe.fit(text)
     
     # Save the model and metrics

@@ -13,6 +13,7 @@ class HindiBPE(BaseTokenizer):
         super().__init__(vocab_size)
         self.merges: Dict[Tuple[str, str], str] = {}
         self.metrics = MetricsLogger()
+        self.min_freq_threshold = 3  # Reduced from 5 to handle more diverse text
         
     def get_stats(self, words: List[List[str]]) -> Counter:
         """Count pair frequencies in current vocabulary."""

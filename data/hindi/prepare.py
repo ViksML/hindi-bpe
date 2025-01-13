@@ -26,14 +26,50 @@ def download_hindi_text():
         'https://hi.wikipedia.org/wiki/महात्मा_गांधी',
         'https://hi.wikipedia.org/wiki/योग',
         'https://hi.wikipedia.org/wiki/भारतीय_संविधान',
-        'https://hi.wikipedia.org/wiki/भारतीय_राष्ट्रपति',
-        'https://hi.wikipedia.org/wiki/भारतीय_संविधान_सभा',
-        'https://hi.wikipedia.org/wiki/भारतीय_राष्ट्रपति_चुनाव',
-        'https://hi.wikipedia.org/wiki/भारतीय_राष्ट्रपति_चुनाव_2017',
-        'https://hi.wikipedia.org/wiki/भारतीय_राष्ट्रपति_चुनाव_2012',
-        'https://hi.wikipedia.org/wiki/भारतीय_राष्ट्रपति_चुनाव_2007',
-        'https://hi.wikipedia.org/wiki/भारतीय_राष्ट्रपति_चुनाव_2002',
-        'https://hi.wikipedia.org/wiki/भारतीय_राष्ट्रपति_चुनाव_1997',
+        'https://hi.wikipedia.org/wiki/भारतीय_स्वतंत्रता_आंदोलन',
+        'https://hi.wikipedia.org/wiki/हिंदी_साहित्य',
+        'https://hi.wikipedia.org/wiki/भारतीय_संस्कृति',
+        'https://hi.wikipedia.org/wiki/भारतीय_दर्शन',
+        'https://hi.wikipedia.org/wiki/वेद',
+        'https://hi.wikipedia.org/wiki/रामायण',
+        'https://hi.wikipedia.org/wiki/महाभारत',
+        'https://hi.wikipedia.org/wiki/बुद्ध',
+        'https://hi.wikipedia.org/wiki/कबीर',
+        'https://hi.wikipedia.org/wiki/तुलसीदास',
+        'https://hi.wikipedia.org/wiki/भगत_सिंह',
+        'https://hi.wikipedia.org/wiki/सुभाष_चन्द्र_बोस',
+        'https://hi.wikipedia.org/wiki/सरदार_वल्लभभाई_पटेल',
+        'https://hi.wikipedia.org/wiki/डॉ॰_भीमराव_अम्बेडकर',
+        # Science and Technology
+        'https://hi.wikipedia.org/wiki/विज्ञान',
+        'https://hi.wikipedia.org/wiki/कंप्यूटर',
+        'https://hi.wikipedia.org/wiki/इंटरनेट',
+        'https://hi.wikipedia.org/wiki/अंतरिक्ष_विज्ञान',
+        
+        # Arts and Entertainment
+        'https://hi.wikipedia.org/wiki/बॉलीवुड',
+        'https://hi.wikipedia.org/wiki/भारतीय_संगीत',
+        'https://hi.wikipedia.org/wiki/भारतीय_नृत्य',
+        
+        # Sports
+        'https://hi.wikipedia.org/wiki/क्रिकेट',
+        'https://hi.wikipedia.org/wiki/हॉकी',
+        'https://hi.wikipedia.org/wiki/कबड्डी',
+        
+        # Education
+        'https://hi.wikipedia.org/wiki/शिक्षा',
+        'https://hi.wikipedia.org/wiki/विश्वविद्यालय',
+        
+        # Geography
+        'https://hi.wikipedia.org/wiki/हिमालय',
+        'https://hi.wikipedia.org/wiki/गंगा',
+        'https://hi.wikipedia.org/wiki/राजस्थान',
+        
+        # Modern India
+        'https://hi.wikipedia.org/wiki/भारतीय_अर्थव्यवस्था',
+        'https://hi.wikipedia.org/wiki/भारतीय_रेल',
+        'https://hi.wikipedia.org/wiki/भारतीय_सेना',
+        'https://hi.wikipedia.org/wiki/भारतीय_अंतरिक्ष_अनुसंधान_संगठन'
     ]
     
     all_text = []
